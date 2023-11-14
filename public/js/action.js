@@ -1,14 +1,34 @@
-function somaNumero(n1, n2, op){
-    let resultado=0;
-    if(op==="c"){
-        resultado=(n1+n2)
-        console.table(resultado)
-        return
-    }
+function calculaNumeros(){
+    let n1 = parseInt(document.getElementById("usuario").value)
+    let n2 = parseInt(document.getElementById("senha").value)
+    let op = (document.getElementById("operation").value)
+    let resultado
 
-    if(op==="a"){
-        resultado=(n1 - n2)
-        alert(resultado)
-        return
+    if(op === "+"){
+        
+        resultado = (n1 + n2)
+        alert("Soma: "+ n1 +" "+ op +" "+ n2 +" = "+resultado)
+
+    }
+    else if(op === "-"){
+        
+        resultado = (n1 - n2)
+        alert("Subtração: "+ n1 +" "+ op +" "+ n2 +" = "+resultado)
+
+    }
+    else if (op === "*"){
+
+        resultado = (n1 * n2)
+        alert("Multiplacação: "+ n1 +" "+ op +" "+ n2 +" = "+resultado)
+    }
+    else if (op === "/"){
+
+        resultado = (n1 / n2)
+        alert("Divisão: "+ n1 +" "+ op +" "+ n2 +" = "+resultado)
+    }
+    else if (op === "sqrt"){
+
+        resultado = Math.sqrt(n1 + n2)
+        alert("Raiz Quadrada: "+ n1 +" "+ op +" "+ n2 +" = "+resultado)
     }
 }
