@@ -1,34 +1,11 @@
-function calculaNumeros(){
-    let n1 = parseInt(document.getElementById("usuario").value)
-    let n2 = parseInt(document.getElementById("senha").value)
-    let op = (document.getElementById("operation").value)
-    let resultado
+import userLogin from './moduloDados.js'
 
-    if(op === "+"){
-        
-        resultado = (n1 + n2)
-        alert("Soma: "+ n1 +" "+ op +" "+ n2 +" = "+resultado)
+const login = document.getElementById("login")
 
-    }
-    else if(op === "-"){
-        
-        resultado = (n1 - n2)
-        alert("Subtração: "+ n1 +" "+ op +" "+ n2 +" = "+resultado)
+login.addEventListener("click", (e) => {
+    let user = document.getElementById("usuario").value
+    let senha = document.getElementById("senha").value
 
-    }
-    else if (op === "*"){
-
-        resultado = (n1 * n2)
-        alert("Multiplacação: "+ n1 +" "+ op +" "+ n2 +" = "+resultado)
-    }
-    else if (op === "/"){
-
-        resultado = (n1 / n2)
-        alert("Divisão: "+ n1 +" "+ op +" "+ n2 +" = "+resultado)
-    }
-    else if (op === "sqrt"){
-
-        resultado = Math.sqrt(n1 + n2)
-        alert("Raiz Quadrada: "+ n1 +" "+ op +" "+ n2 +" = "+resultado)
-    }
-}
+    console.table(user, senha)
+    console.table(userLogin)
+})
